@@ -4,8 +4,8 @@ import SplashScreen from 'react-native-splash-screen';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Newapi from './Api/NewDrawerscreen'
-import Exitscreen from './Api/Exitscreen'
+import DrawerHome from './Api/NewDrawerscreen'
+import Exitscreen from './Api/ExitScreen'
 import Layoutpage from './Api/Layoutpage'
 import Countryshareborder from './Api/Contryshareborder'
 
@@ -22,8 +22,8 @@ const Stack = createStackNavigator();
 const Appdrawer = () => {
   return(
   <Drawer.Navigator>
-<Drawer.Screen name = 'Homename' component={Newapi} />
-<Drawer.Screen name = 'exit' component={Exitscreen} />
+<Drawer.Screen name = 'Home' component={DrawerHome} />
+<Drawer.Screen name = 'Exit' component={Exitscreen} />
   </Drawer.Navigator>
   )
 }
@@ -31,10 +31,10 @@ const Appdrawer = () => {
 
 
 
-const Newnavi = () => {
+const StackNavigation = () => {
   return(
     <Stack.Navigator initialRouteName="Home" headerMode='none'>
-      <Stack.Screen name='kriss' component={Appdrawer} />
+      <Stack.Screen name='Appdrawer' component={Appdrawer} />
       <Stack.Screen name='Layoutpage' component={Layoutpage} />
       <Stack.Screen name='Countryshareborder' component={Countryshareborder} />
     </Stack.Navigator>
@@ -43,7 +43,7 @@ const Newnavi = () => {
 
   return (
     <NavigationContainer>
-      <Newnavi />
+      <StackNavigation />
     </NavigationContainer>
      
   );

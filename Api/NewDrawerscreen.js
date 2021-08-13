@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, style, Button, TouchableOpacity, ScrollView} fro
 import {Layoutpage} from './Layoutpage'
 import { NavigationContainer } from '@react-navigation/native';
 
-export default class Newapi extends React.Component{
+export default class DrawerHome extends React.Component{
    constructor(props){
        super(props);
        this.state = {
@@ -27,7 +27,7 @@ redirect: 'follow'
     .then(result => {
         this.setState({region: result})
     }).catch((error) => {
-        console.log('shbchsdvjbfv',error)
+        console.log('Error',error)
     } )
 }
    
@@ -57,7 +57,7 @@ redirect: 'follow'
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        backgroundColor: '#4f6d7a'
+        backgroundColor: '#FFFFFF'
     },
     
     
@@ -65,6 +65,6 @@ const styles = StyleSheet.create({
     callname: {
         textAlign: 'center',
         fontSize: 50,
-        color:'#FF5733'
+        color:'#4f6d7a'
     }
 }) 

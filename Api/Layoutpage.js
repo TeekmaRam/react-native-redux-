@@ -7,11 +7,11 @@ export default class Layoutpage extends React.Component{
    constructor(props){
        super(props);
        this.state = {
-        countryName : [],
+        countryName : []
         
        }
    }
-   
+
 componentDidMount(){
     this.Newapifetch();
 }
@@ -32,34 +32,21 @@ redirect: 'follow'
         
         this.setState({countryName})
     }).catch((error) => {
-        console.log('shbchsdvjbfv',error)
+        console.log('Error',error)
     } )
 }                  
 
    render(){
        return(
-           <ScrollView style={styles.container}>
-            
-                        
-               {
-                   
-                   
+           <ScrollView style={styles.container}>         
+               {      
                   this.state.countryName.map((callname, key) => (
-                      <View>
-
-                     
                         <TouchableOpacity onPress= { ()  => this.props.navigation.navigate('Countryshareborder', {Contryborder: callname.name})}>
                         <Text style={styles.callname} key={key}>{callname.name}</Text>
                         </TouchableOpacity>
-                        <Image source = { callname.flag} style={styles.imageView} />
-                        </View>
                         
-                         ))
-                       
-                }
-                
-                
-               
+                            ))
+                         }
            </ScrollView>
        )
    }
@@ -78,14 +65,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 20,
         color:'#4f6d7a'
-    },
-    imageView: {
- 
-        width: '50%',
-        height: 100 ,
-        margin: 7,
-        borderRadius : 7
-    
     }
     
 }) 

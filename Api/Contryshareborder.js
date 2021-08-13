@@ -52,7 +52,7 @@ redirect: 'follow'
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        backgroundColor: '#4f6d7a'
+        backgroundColor: '#FFFFFF'
     },
     
     
@@ -61,6 +61,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         flexDirection: 'column',    
         fontSize: 30,
-        color:'#FF5733'
+        color:'#4f6d7a'
     }
 }) 
