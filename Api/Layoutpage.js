@@ -40,12 +40,16 @@ redirect: 'follow'
        return(
            <ScrollView style={styles.container}>         
                {      
+               
                   this.state.countryName.map((callname, key) => (
+                    <View>
                         <TouchableOpacity onPress= { ()  => this.props.navigation.navigate('Countryshareborder', {Contryborder: callname.name})}>
                         <Text style={styles.callname} key={key}>{callname.name}</Text>
                         </TouchableOpacity>
-                        
+                        <Image source = {{ uri: callname.flag }} style={styles.imageView} />
+                        </View>
                             ))
+                           
                          }
            </ScrollView>
        )
@@ -59,6 +63,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF'
     },
     
+    imageView: {
+ 
+        width: '50%',
+        height: 100 ,
+        margin: 7,
+        borderRadius : 7
+     
+    },
     
 
     callname: {
