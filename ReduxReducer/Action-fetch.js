@@ -1,15 +1,5 @@
-//import * as  types from './Action-type'
+
 import { Fetch_Request, Fetch_Sucess,  Fetch_Falure} from "./Action-type"
-import axios from 'axios'
-import CountryName from "../Newfolder/Fuckoff"
-import { response } from "express"
-
-
-
-
-
-
-
 
 
 export function FetchRequest () { 
